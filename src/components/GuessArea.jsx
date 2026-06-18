@@ -4,16 +4,18 @@ import '../styles/GuessArea.css';
 const GuessArea = (props) => {
   const [isCorrect, setIsCorrect] = useState("");
   const [guess, setGuess] = useState("");
-  const { answer, streak } = props;
+  const { answer, setStreak, streak, maxStreak } = props;
   const checkGuess = (e) => {
     e.preventDefault();
     if(!answer) return;
     if (guess.toLowerCase() === answer.toLowerCase()) {
       setIsCorrect("correct");
-      streak((prev) => prev + 1);
+      setStreak((prev) => prev + 1);
     } else {
       setIsCorrect("incorrect");
-      streak(0);
+      maxStreak((prev) => Math.max(prev, streak));
+      setStreak(0);
+
     }
   }
   return (

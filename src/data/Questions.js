@@ -1,4 +1,8 @@
 export const questions = [
+  {
+    question:"Start", 
+    answer: "Click button to begin", 
+    category: "None"},
   // ================= EASY CARDS =================
   {
     question: "True or False: In the original Pokémon Red & Blue games, you could find and catch a wild Mew hidden underneath a mysterious truck parked near the S.S. Anne.",
