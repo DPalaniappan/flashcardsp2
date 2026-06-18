@@ -1,0 +1,23 @@
+.guess-area {
+  display: flex;
+  flex-direction: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+.guess-input {
+  border-radius: 8px;
+  margin-left:1rem;
+  text-align: center;
+  font-size: 1em;
+}
+
+
+
+#correct {
+    border: 5px solid green;
+}
+
+#incorrect {
+    border: 5px solid maroon;
+}
